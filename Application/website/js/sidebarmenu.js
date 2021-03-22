@@ -50,7 +50,7 @@ nav.innerHTML=`<div class="scroll-sidebar">
             </a>
         </li>
         <li class="sidebar-item">
-            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="ReportsA.html"
+            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="ReportsList.html"
                 aria-expanded="false">
                 <i class="fa fa-clipboard" aria-hidden="true"></i>
                 <span class="hide-menu">Reports</span>
