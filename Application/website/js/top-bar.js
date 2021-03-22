@@ -4,7 +4,7 @@ nav.innerHTML=`<nav class="navbar top-navbar navbar-expand-md navbar-dark">
     <!-- ============================================================== -->
     <!-- Logo -->
     <!-- ============================================================== -->
-    <a class="navbar-brand" href="dashboard.html">
+    <a class="navbar-brand" href="Screens/Admin/dashboard.html">
         <!-- Logo icon -->
         <b class="logo-icon">
             <!-- Dark Logo icon -->
@@ -14,7 +14,7 @@ nav.innerHTML=`<nav class="navbar top-navbar navbar-expand-md navbar-dark">
         <!-- Logo text -->
         <span class="logo-text">
             <!-- dark Logo text -->
-            <img src="plugins/images/logo-text.png" alt="homepage" />
+     <!--       <img src="plugins/images/logo-icon.png" alt="homepage" />-->
         </span>
     </a>
     <!-- ============================================================== -->
@@ -57,8 +57,8 @@ nav.innerHTML=`<nav class="navbar top-navbar navbar-expand-md navbar-dark">
         <!-- ============================================================== -->
         <li>
             <a class="profile-pic" href="#">
-                <img src="plugins/images/users/varun.jpg" alt="user-img" width="36"
-                    class="img-circle"><span class="text-white font-medium">Steave</span></a>
+                <img src="plugins/images/users/3.png" alt="user-img" width="36"
+                    class="img-circle"><span class="text-white font-medium">Admin</span></a>
         </li>
         <!-- ============================================================== -->
         <!-- User profile and search -->
