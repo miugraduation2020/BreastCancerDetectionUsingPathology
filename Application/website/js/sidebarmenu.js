@@ -15,56 +15,56 @@ nav.innerHTML=`<div class="scroll-sidebar">
     <ul id="sidebarnav">
         <!-- User Profile-->
         <li class="sidebar-item pt-2">
-            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="Screens/Admin/dashboard.html"
+            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="dashboard.html"
                 aria-expanded="false">
                 <i class="far fa-clock" aria-hidden="true"></i>
                 <span class="hide-menu">Dashboard</span>
             </a>
         </li>
         <li class="sidebar-item">
-            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="Screens/Admin/profile.html"
+            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="profile.html"
                 aria-expanded="false">
                 <i class="fa fa-user-circle" aria-hidden="true"></i>
                 <span class="hide-menu">Profile</span>
             </a>
         </li>
         <li class="sidebar-item">
-            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="Screens/Admin/PatientsA.html"
+            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="PatientsA.html"
                 aria-expanded="false">
                 <i class="fa fa-user" aria-hidden="true"></i>
                 <span class="hide-menu">Patients</span>
             </a>
         </li>
         <li class="sidebar-item">
-            <a class="sidebar-link waves-effect waves-dark sidebar-link" href=" Screens/Admin/PathologistsA.html"
+            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="PathologistsA.html"
                 aria-expanded="false">
                 <i class="fa fa-user-md" aria-hidden="true"></i>
                 <span class="hide-menu">Pathologists</span>
             </a>
         </li>
         <li class="sidebar-item">
-            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="Screens/Admin/AddUser.html"
+            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="AddUser.html"
                 aria-expanded="false">
                 <i class="fa fa-user-plus" aria-hidden="true"></i>
                 <span class="hide-menu">Add Users</span>
             </a>
         </li>
         <li class="sidebar-item">
-            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="Screens/Admin/ReportsA.html"
+            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="ReportsA.html"
                 aria-expanded="false">
                 <i class="fa fa-clipboard" aria-hidden="true"></i>
                 <span class="hide-menu">Reports</span>
             </a>
         </li>
         <li class="sidebar-item">
-            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="Screens/Admin/blank.html"
+            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="blank.html"
                 aria-expanded="false">
                 <i class="fa fa-comments" aria-hidden="true"></i>
                 <span class="hide-menu">Messages</span>
             </a>
         </li>
         <li class="sidebar-item">
-            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="Screens/Admin/404.html"
+            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="404.html"
                 aria-expanded="false">
                 <i class="fa fa-info-circle" aria-hidden="true"></i>
                 <span class="hide-menu">Settings</span>
