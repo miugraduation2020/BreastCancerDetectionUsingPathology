@@ -19,6 +19,121 @@ var firebase = require('firebase');
 require("firebase/auth");
 require("firebase/firestore");
 
+
+const {PythonShell} = require('python-shell');
+// var pyshell = new PythonShell('D:\\MIU\\Graduation Project\\project\\BreastCancerDetectionUsingPathology\\test.py');
+
+// pyshell.send(JSON.stringify(["D:\\MIU\\Graduation Project\\ICIAR2018_BACH_Challenge\\Photos\\Invasive"]));
+
+// pyshell.on('message', function (message) {
+//     // received a message sent from the Python script (a simple "print" statement)
+//     console.log(message);
+// });
+
+// // end the input stream and allow the process to exit
+// pyshell.end(function (err) {
+//     if (err){
+//         throw err;
+//     };
+
+//     console.log('finished');
+// });
+
+// The path to your python script
+var myPythonScript = "D:\\MIU\\Graduation Project\\project\\BreastCancerDetectionUsingPathology\\Application\\test.py";
+// Provide the path of the python executable, if python is available as environment variable then you can use only "python"
+var pythonExecutable = "C:\\Users\\DELL\\AppData\\Local\\Programs\\Python\\Python38\\python.exe";
+const { spawn } = require('child_process')
+
+const logOutput = (name) => (message) => console.log(`[${name}] ${message}`)
+
+function run() {
+  return new Promise((resolve, reject) => {
+    const process = spawn(pythonExecutable, [myPythonScript, 'D:\\MIU\\Graduation Project\\invasive-ductal-carcinoma.jpg']);
+
+    const out = []
+    process.stdout.on(
+      'data',
+      (data) => {
+        out.push(data.toString());
+        logOutput('stdout')(data);
+      }
+    );
+
+    const err = []
+    process.stderr.on(
+      'data',
+      (data) => {
+        err.push(data.toString());
+        logOutput('stderr')(data);
+      }
+    );
+
+    process.on('exit', (code, signal) => {
+      logOutput('exit')(`${code} (${signal})`)
+      if (code !== 0) {
+        reject(new Error(err.join('\n')))
+        return
+      }
+      try {
+        resolve(JSON.parse(out[0]));
+      } catch(e) {
+        reject(e);
+      }
+    });
+  });
+}
+
+(async () => {
+  try {
+    const output = await run()
+    logOutput('main')(output.message)
+    process.exit(0)
+  } catch (e) {
+    console.error('Error during script execution ', e.stack);
+    process.exit(1);
+  }
+})();
+//Function to convert an Uint8Array to a string
+// var uint8arrayToString = function(data){
+//     return String.fromCharCode.apply(null, data);
+// };
+
+// const spawn = require('child_process').spawn;
+// const scriptExecution = spawn(pythonExecutable, [myPythonScript]);
+
+// // Handle normal output
+// scriptExecution.stdout.on('data', (data) => {
+//     console.log(String.fromCharCode.apply(null, data));
+// });
+// scriptExecution.stderr.on('data', (data) => {
+//     // As said before, convert the Uint8Array to a readable string.
+//     console.log(uint8arrayToString(data));
+// });
+
+// scriptExecution.on('exit', (code) => {
+//     console.log("Process quit with code : " + code);
+// });
+// // Write data (remember to send only strings or numbers, otherwhise python wont understand)
+// // var data = JSON.stringify([1,2,3,4,5]);
+// // scriptExecution.stdin.write(data);
+// // // End data write
+// // scriptExecution.stdin.end();
+
+// // const spawn = require('child_process').spawn;
+// // const scriptExecution = spawn(pythonExecutable, [myPythonScript]);
+
+// // // Handle normal output
+// // scriptExecution.stdout.on('data', (data) => {
+// //     console.log(String.fromCharCode.apply(null, data));
+// // });
+
+// // // Write data (remember to send only strings or numbers, otherwhise python wont understand)
+// // var data = JSON.stringify([1,2,3,4,5]);
+// // scriptExecution.stdin.write(data);
+// // // End data write
+// // scriptExecution.stdin.end();
+
 var admin = require("firebase-admin");
 
 var serviceAccount = require("./bcbd-7373d-d4dc5dff0a06.json");
