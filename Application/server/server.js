@@ -40,7 +40,7 @@ const {PythonShell} = require('python-shell');
 // });
 
 // The path to your python script
-var myPythonScript = "D:\\MIU\\Graduation Project\\project\\BreastCancerDetectionUsingPathology\\Application\\test.py";
+var myPythonScript = "D:\\MIU\\Graduation Project\\project\\BreastCancerDetectionUsingPathology\\Application\\server\\python\\test.py";
 // Provide the path of the python executable, if python is available as environment variable then you can use only "python"
 var pythonExecutable = "C:\\Users\\DELL\\AppData\\Local\\Programs\\Python\\Python38\\python.exe";
 const { spawn } = require('child_process')
@@ -49,8 +49,7 @@ const logOutput = (name) => (message) => console.log(`[${name}] ${message}`)
 
 function run() {
   return new Promise((resolve, reject) => {
-    const process = spawn(pythonExecutable, [myPythonScript, 'D:\\MIU\\Graduation Project\\invasive-ductal-carcinoma.jpg']);
-
+    const process = spawn(pythonExecutable, [myPythonScript, 'D:\\MIU\\Graduation Project\\TestX.jpg']);
     const out = []
     process.stdout.on(
       'data',
@@ -94,45 +93,7 @@ function run() {
     process.exit(1);
   }
 })();
-//Function to convert an Uint8Array to a string
-// var uint8arrayToString = function(data){
-//     return String.fromCharCode.apply(null, data);
-// };
 
-// const spawn = require('child_process').spawn;
-// const scriptExecution = spawn(pythonExecutable, [myPythonScript]);
-
-// // Handle normal output
-// scriptExecution.stdout.on('data', (data) => {
-//     console.log(String.fromCharCode.apply(null, data));
-// });
-// scriptExecution.stderr.on('data', (data) => {
-//     // As said before, convert the Uint8Array to a readable string.
-//     console.log(uint8arrayToString(data));
-// });
-
-// scriptExecution.on('exit', (code) => {
-//     console.log("Process quit with code : " + code);
-// });
-// // Write data (remember to send only strings or numbers, otherwhise python wont understand)
-// // var data = JSON.stringify([1,2,3,4,5]);
-// // scriptExecution.stdin.write(data);
-// // // End data write
-// // scriptExecution.stdin.end();
-
-// // const spawn = require('child_process').spawn;
-// // const scriptExecution = spawn(pythonExecutable, [myPythonScript]);
-
-// // // Handle normal output
-// // scriptExecution.stdout.on('data', (data) => {
-// //     console.log(String.fromCharCode.apply(null, data));
-// // });
-
-// // // Write data (remember to send only strings or numbers, otherwhise python wont understand)
-// // var data = JSON.stringify([1,2,3,4,5]);
-// // scriptExecution.stdin.write(data);
-// // // End data write
-// // scriptExecution.stdin.end();
 
 var admin = require("firebase-admin");
 

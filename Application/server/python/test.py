@@ -114,7 +114,7 @@ def f1_m(y_true, y_pred):
     return 2*((precision*recall)/(precision+recall+K.epsilon()))
 
 model = []
-model1 = keras.models.load_model('D:\\MIU\\Graduation Project\\project\\BreastCancerDetectionUsingPathology\\Application\\my_model\\my_model',custom_objects={'f1_m':f1_m,'precision_m':precision_m,'recall_m':recall_m})
+model1 = keras.models.load_model('D:\\MIU\\Graduation Project\\project\\BreastCancerDetectionUsingPathology\\Application\\server\\python\\my_model\\my_model',custom_objects={'f1_m':f1_m,'precision_m':precision_m,'recall_m':recall_m})
 
 model.append(model1)
 
