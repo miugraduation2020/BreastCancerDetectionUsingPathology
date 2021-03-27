@@ -35,18 +35,18 @@ nav.innerHTML=`<div class="scroll-sidebar">
                 <span class="hide-menu">My Patients</span>
             </a>
         </li>
-        <li class="sidebar-item">
+        <!--<li class="sidebar-item">
             <a class="sidebar-link waves-effect waves-dark sidebar-link" href="PathologistsA.html"
                 aria-expanded="false">
                 <i class="fa fa-user-md" aria-hidden="true"></i>
-                <span class="hide-menu">Pathologists</span>
+                <span class="hide-menu">Reports</span>
             </a>
-        </li>
+        </li>--->
         <li class="sidebar-item">
             <a class="sidebar-link waves-effect waves-dark sidebar-link" href="AddUser.html"
                 aria-expanded="false">
                 <i class="fa fa-user-plus" aria-hidden="true"></i>
-                <span class="hide-menu">Add Users</span>
+                <span class="hide-menu">Diagnose</span>
             </a>
         </li>
         <li class="sidebar-item">
@@ -60,7 +60,7 @@ nav.innerHTML=`<div class="scroll-sidebar">
             <a class="sidebar-link waves-effect waves-dark sidebar-link" href="blank.html"
                 aria-expanded="false">
                 <i class="fa fa-comments" aria-hidden="true"></i>
-                <span class="hide-menu">Messages</span>
+                <span class="hide-menu">Notification</span>
             </a>
         </li>
         <li class="sidebar-item">
