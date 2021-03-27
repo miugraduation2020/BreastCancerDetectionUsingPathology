@@ -1,7 +1,7 @@
 
 
 
-document.getElementById('subnewuser').addEventListener('click', addUser);
+var e=document.getElementById('subnewuser').addEventListener('click', addUser);
 
 
 function addUser(e) {
@@ -13,7 +13,7 @@ function addUser(e) {
   phoneNo = document.getElementById("new-phone").value;
   userRole = document.getElementById("new-userrole").value;
 
-  signInWithEmailAndPassword(email, password)
+  signUpWithEmailPassword(email, password)
     .then(function (data) {
       console.log(data);
       postData('/addUser', {
@@ -26,13 +26,8 @@ function addUser(e) {
     });
 console.log('mod');
 
-  // type:this.type,
-  // this.type=type;
-  // this.email=email;    //get element by id = user.email
-  // this.password=password;
-  // this.phoneNo=phoneNo;
-
 }
+
 const postData = async ( url = '', data = {})=>{
 
   console.log(data)
@@ -44,9 +39,12 @@ const postData = async ( url = '', data = {})=>{
         'Accept': 'application/json'
     },
 
-    body: JSON.stringify(data),   
-
+    body: JSON.stringify(data) 
   });
+  console.log('postdone')
+
+}
+
 function signUpWithEmailPassword(email, password) {
   // [START auth_signup_password]
   firebase.auth().createUserWithEmailAndPassword(this.email, this.password)
@@ -90,4 +88,4 @@ function sendPasswordReset() {
       var errorMessage = error.message;
       // ..
     });
-  }}
+  }
