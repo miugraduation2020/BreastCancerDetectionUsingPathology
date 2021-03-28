@@ -16,8 +16,7 @@
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="plugins/images/favicon.png">
     <!-- Custom CSS -->
-    <script src="Application\models\User.js"></script>
-
+<script src='models/firebase.js'></script>
    <link href="css/style.min.css" rel="stylesheet">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -104,7 +103,7 @@
     <div class="col-lg-8 col-xlg-9 col-md-12">
         <div class="card">
             <div class="card-body">
-                <form class="form-horizontal form-material" id="add-user" method="POST" action=''>
+                <form class="form-horizontal form-material" id="add-user" name="adduser" method="POST" action=''>
                     <div class="form-group mb-4">
                         <label class="col-md-12 p-0">Full Name</label>
                         <div class="col-md-12 border-bottom p-0">
@@ -151,7 +150,8 @@
                     </div>
                     <div class="form-group mb-4">
                         <div class="col-sm-12">
-                            <button  id='subnewuser' class="btn btn-success">Add Profile</button>
+                            <!-- <button  id='subnewuser' class="btn btn-success">Add Profile</button> -->
+                            <input type="submit" type="button" id="submitUser" onclick="addUser"/>
                         </div>
                     </div>
                 </form>
@@ -206,8 +206,10 @@
     <!--Custom JavaScript -->
     <script src="js/custom.js"></script>
     <!--Header -->
-    <script src="js/top-bar.js"></script>
+    <script src="js/top-bar.jss"></script>
     <script src="../server.js"></script>
+    <script src="./models/firebase.js"></script>
+
 </body>
 
 </html>

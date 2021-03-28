@@ -30,7 +30,7 @@ app.use(express.static('website'));
 
 // Spin up the server
 
-const port = 8100;
+const port = 8000;
 const server = app.listen(port, listening);
 
 // Callback to debug
@@ -48,48 +48,23 @@ app.get('/all', function (req, res) {
 
 })
 
-// firebase
-var firebase = require('firebase');
+app.get('/all', function (req, res) {
 
-/* Firebase Auth*/
+    res.send(projectData);
 
-/* Firebase Firestore*/
+  })
 
-require("firebase/firestore");
-
-/* Firebase UI*/
-
-
-// Your web app's Firebase configuration
-var firebaseConfig = {
-    apiKey: "AIzaSyACsEPvt6lX5i7Dcji6uK-_vwj7CvV42JA",
-    authDomain: "bcbd-7373d.firebaseapp.com",
-    projectId: "bcbd-7373d",
-    storageBucket: "bcbd-7373d.appspot.com",
-    messagingSenderId: "285000361776",
-    appId: "1:285000361776:web:f43dd3808d3eca09868af5",
-    measurementId: "G-9ZDP3ZR1EP"
-};
-
-// Initialize Firebase
-firebase.initializeApp(firebaseConfig);
-
-const admin = require('firebase-admin');
-admin.initializeApp();
-
-const db = admin.firestore();
-
-app.post('/addUser', async (req, res) => {
-    newUser = await db.collection('users').add
-        ({
+app.post('/add',  (req, res) => {
+    newUser =
+        {
             fullName: req.body.fullName,
             email: req.body.email,
             password: req.body.password,
             phoneNo: req.body.phoneNo,
-            userRole: req.body.userRole,
+            userRole: req.body.userRole
+        }
 
-        })
-    console.log('A new User was added with the ID: ', newUser.id);
+    // console.log('A new User was added with the ID: ', newUser.id);
 
     //projectData.push(newEntry)
     projectData.unshift(newUser)
@@ -97,6 +72,7 @@ app.post('/addUser', async (req, res) => {
     console.log(projectData)
 
 });
+
 // Post Route
 
 /*Add New User*/
@@ -119,8 +95,6 @@ app.post('/addUser', async (req, res) => {
 
 //   });
 
-
-module.exports = { app };
 
 
 

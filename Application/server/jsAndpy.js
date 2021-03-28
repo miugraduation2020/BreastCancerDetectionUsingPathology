@@ -2,11 +2,11 @@ const {PythonShell} = require('python-shell');
 
 /*Python Script Path*/
 
-var myPythonScript = "D:\\MIU\\Graduation Project\\project\\BreastCancerDetectionUsingPathology\\Application\\server\\python\\test.py";
+var myPythonScript = "D:\\MIU\\Graduation Project\\ProjectFIN\\BreastCancerDetectionUsingPathology\\Application\\server\\python\\test.py";
 
 /* path of the python executable, if python is available as environment variable then you can use only "python"*/
 
-var pythonExecutable = "C:\\Users\\DELL\\AppData\\Local\\Programs\\Python\\Python38\\python.exe";
+var pythonExecutable = "python";
 
 const { spawn } = require('child_process')
 
