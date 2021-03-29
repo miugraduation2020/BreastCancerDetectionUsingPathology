@@ -8,8 +8,8 @@ nav.innerHTML=`<nav class="navbar top-navbar navbar-expand-md navbar-dark">
         <!-- Logo icon -->
         <b class="logo-icon">
             <!-- Dark Logo icon -->
-            <img src="plugins/images/logo-icon.png" alt="homepage" />
-        </b>
+            <img src="plugins/images/Untitled design (15).png"
+            alt="logo">        </b>
         <!--End Logo icon -->
         <!-- Logo text -->
         <span class="logo-text">

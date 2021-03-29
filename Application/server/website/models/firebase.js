@@ -1,35 +1,36 @@
 
-// firebase
 var firebase = require('firebase');
-
-/* Firebase Auth*/
-
-/* Firebase Firestore*/
-
-require("firebase/firestore");
-
-/* Firebase UI*/
-
-
-// Your web app's Firebase configuration
+var ff = require('firebase-functions');
 var firebaseConfig = {
-    apiKey: "AIzaSyACsEPvt6lX5i7Dcji6uK-_vwj7CvV42JA",
-    authDomain: "bcbd-7373d.firebaseapp.com",
-    projectId: "bcbd-7373d",
-    storageBucket: "bcbd-7373d.appspot.com",
-    messagingSenderId: "285000361776",
-    appId: "1:285000361776:web:f43dd3808d3eca09868af5",
-    measurementId: "G-9ZDP3ZR1EP"
+  apiKey: "AIzaSyDJJnR33eTGNQ4i1UqBt5wiMTH-2Nw5Sf0",
+  authDomain: "gp-bcbd.firebaseapp.com",
+  projectId: "gp-bcbd",
+  storageBucket: "gp-bcbd.appspot.com",
+  messagingSenderId: "661391592053",
+  appId: "1:661391592053:web:143d926411a35b300d063c",
+  measurementId: "G-JDTG7ZG60S"
 };
-
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
+var admin = require("firebase-admin");
+var serviceAccount = require("./gp-bcbd-firebase-adminsdk-gg7zh-5c305792ac.json");
 
-const admin = require('firebase-admin');
-admin.initializeApp();
 
+admin.initializeApp({
+  credential: admin.credential.cert(serviceAccount)
+});
 const db = admin.firestore();
+async function testadd(db){
+const docRef =  db.collection('users').doc('alovelace');
+console.log(`test1`);
+await docRef.set({
+  first: 'Ada',
+  last: 'Lovelace',
+  born: 1815
+});
+console.log(`test2`);
 
+}
 function addUser() {
 
   fullName = document.getElementById("full-name").value;
@@ -44,67 +45,67 @@ function addUser() {
       console.log(data);
       postData('/add', {
         fullName: fullName,
-        email:email,
+        email: email,
         password: password,
-        phoneNo:phoneNo,
+        phoneNo: phoneNo,
         userRole: userRole
       });
-   addtodb(); 
+      addtodb();
     });
-console.log('mod');
+  console.log('mod');
 
 }
 
-const postData = async ( url = '', data = {})=>{
+const postData = async (url = '', data = {}) => {
 
   console.log(data)
   const response = await fetch(url, {
-    method: 'POST', 
-    credentials: 'same-origin', 
+    method: 'POST',
+    credentials: 'same-origin',
     headers: {
-        'Content-Type': 'application/json',
-        'Accept': 'application/json'
+      'Content-Type': 'application/json',
+      'Accept': 'application/json'
     },
 
-    body: JSON.stringify(data) 
+    body: JSON.stringify(data)
   });
   try {
     const newData = await response.json();
     return newData;
 
-  } catch(error) {
-      console.log("error", error);
+  } catch (error) {
+    console.log("error", error);
   };
 }
 
 
-const addtodb = async(url='')=>{
-    const request = await fetch(url);
-    
-      try{
-          const alldata = await request.json();
-          newUser = db.collection('users').add({     
-            fullName: alldata[0].fullName,
-            email: alldata[0].email,
-            password: alldata[0].password,
-            phoneNo: alldata[0].phoneNo,
-            userRole: alldata[0].userRole,
+const addtodb = async (url = '') => {
+  const request = await fetch(url);
 
-       
-  })
+  try {
+    const alldata = await request.json();
+    newUser = db.collection('users').add({
+      fullName: alldata[0].fullName,
+      email: alldata[0].email,
+      password: alldata[0].password,
+      phoneNo: alldata[0].phoneNo,
+      userRole: alldata[0].userRole,
 
-        
-  
-      } catch(error){
-          console.log("error", error);
-      }
+
+    })
+
+
+
+  } catch (error) {
+    console.log("error", error);
   }
+}
 
 
-  
- function signUpWithEmailPassword(email, password) {
+
+function signUpWithEmailPassword(email, password) {
   // [START auth_signup_password]
-  firebase.auth().createUserWithEmailAndPassword(this.email, this.password)
+  auth().createUserWithEmailAndPassword(this.email, this.password)
     .then((userCredential) => {
       var user = userCredential.user;
     })
