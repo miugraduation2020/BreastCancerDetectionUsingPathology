@@ -15,14 +15,14 @@ nav.innerHTML=`<div class="scroll-sidebar">
     <ul id="sidebarnav">
         <!-- User Profile-->
         <li class="sidebar-item pt-2">
-            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="dashboard.html"
+            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="componants/404.html"
                 aria-expanded="false">
                 <i class="far fa-clock" aria-hidden="true"></i>
                 <span class="hide-menu">Dashboard</span>
             </a>
         </li>
         <li class="sidebar-item">
-            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="profile.html"
+            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="pathProfile.html"
                 aria-expanded="false">
                 <i class="fa fa-user-circle" aria-hidden="true"></i>
                 <span class="hide-menu">Profile</span>
@@ -36,21 +36,21 @@ nav.innerHTML=`<div class="scroll-sidebar">
             </a>
         </li>
         <!--<li class="sidebar-item">
-            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="PathologistsA.html"
+            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="Reports.html"
                 aria-expanded="false">
                 <i class="fa fa-user-md" aria-hidden="true"></i>
                 <span class="hide-menu">Reports</span>
             </a>
         </li>--->
         <li class="sidebar-item">
-            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="AddUser.html"
+            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="generateReport.html"
                 aria-expanded="false">
                 <i class="fa fa-user-plus" aria-hidden="true"></i>
                 <span class="hide-menu">Diagnose</span>
             </a>
         </li>
         <li class="sidebar-item">
-            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="reportsPath.html"
+            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="reportslist.html"
                 aria-expanded="false">
                 <i class="fa fa-clipboard" aria-hidden="true"></i>
                 <span class="hide-menu">Reports</span>
@@ -67,7 +67,7 @@ nav.innerHTML=`<div class="scroll-sidebar">
             <a class="sidebar-link waves-effect waves-dark sidebar-link" href="404.html"
                 aria-expanded="false">
                 <i class="fa fa-info-circle" aria-hidden="true"></i>
-                <span class="hide-menu">Settings</span>
+                <span class="hide-menu">FAQs</span>
             </a>
         </li>
         <li class="text-center p-20 upgrade-btn">

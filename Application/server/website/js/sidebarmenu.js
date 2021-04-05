@@ -60,14 +60,14 @@ nav.innerHTML=`<div class="scroll-sidebar">
             <a class="sidebar-link waves-effect waves-dark sidebar-link" href="blank.html"
                 aria-expanded="false">
                 <i class="fa fa-comments" aria-hidden="true"></i>
-                <span class="hide-menu">Messages</span>
+                <span class="hide-menu">Notification</span>
             </a>
         </li>
         <li class="sidebar-item">
             <a class="sidebar-link waves-effect waves-dark sidebar-link" href="404.html"
                 aria-expanded="false">
                 <i class="fa fa-info-circle" aria-hidden="true"></i>
-                <span class="hide-menu">Settings</span>
+                <span class="hide-menu">FAQs</span>
             </a>
         </li>
         <li class="text-center p-20 upgrade-btn">

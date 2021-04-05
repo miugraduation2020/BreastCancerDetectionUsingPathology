@@ -11,10 +11,10 @@
     <meta name="description"
         content="Ample Admin Lite is powerful and clean admin dashboard template, inpired from Bootstrap Framework">
     <meta name="robots" content="noindex,nofollow">
-    <title>Ample Admin Lite Template by WrapPixel</title>
+    <title>Add User</title>
     <link rel="canonical" href="https://www.wrappixel.com/templates/ample-admin-lite/" />
     <!-- Favicon icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="plugins/images/favicon.png">
+    <link rel="icon" type="image/png" sizes="20x20" href="plugins/images/favi.png">
     <!-- Custom CSS -->
    <link href="css/style.min.css" rel="stylesheet">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -104,6 +104,16 @@
             <div class="card-body">
                 <form class="form-horizontal form-material" id="add-user" name="adduser" method="POST" action=''>
                     <div class="form-group mb-4">
+                        <label class="col-sm-12">Select Type</label>
+                        <div class="col-sm-12 border-bottom">
+                            <select class="form-control p-0 border-0" name="userRole" id='new-userrole'>
+                                <option>Admin</option>
+                                <option>Pathologist</option>
+                                <option>Patient</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group mb-4">
                         <label class="col-md-12 p-0">Full Name</label>
                         <div class="col-md-12 border-bottom p-0">
                             <input type="text" placeholder="Johnathan Doe"
@@ -133,24 +143,36 @@
                         <label class="col-md-12 p-0">Phone No</label>
                         <div class="col-md-12 border-bottom p-0">
                             <input type="text" placeholder="123 456 7890"
-                                class="form-control p-0 border-0" name="newPhone" id='new-phone'>
+                                class="form-control p-0 border-0">
                         </div>
                     </div>
-                   
                     <div class="form-group mb-4">
-                        <label class="col-sm-12">Select Type</label>
+                        <label class="col-md-12 p-0">Date of Birth</label>
+                        <div class="col-md-12 border-bottom p-0">
+                            <input type="date" placeholder="06/15/1999"
+                                class="form-control p-0 border-0">
+                        </div>
+                    </div>
+                    <div class="form-group mb-4">
+                        <label class="col-md-12 p-0">Address</label>
+                        <div class="col-md-12 border-bottom p-0">
+                            <textarea rows="3" class="form-control p-0 border-0"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group mb-4">
+                        <label class="col-sm-12"> Gender</label>
                         <div class="col-sm-12 border-bottom">
-                            <select class="form-control p-0 border-0" name="userRole" id='new-userrole'>
-                                <option>Admin</option>
-                                <option>Pathologist</option>
-                                <option>Patient</option>
+                            <select class="form-control p-0 border-0">
+                                <option>Female</option>
+                                <option>Male</option>   
                             </select>
                         </div>
-                    </div>
+                    </div>                   
+                
                     <div class="form-group mb-4">
                         <div class="col-sm-12">
                             <!-- <button  id='subnewuser' class="btn btn-success">Add Profile</button> -->
-                            <input type="submit" type="button" id="submitUser" onclick="addUser"/>
+                            <input type="submit" type="button" class="btn btn-success" id="submitUser" onclick="addUser"/>
                         </div>
                     </div>
                 </form>

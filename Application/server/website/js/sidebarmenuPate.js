@@ -28,6 +28,13 @@ nav.innerHTML=`<div class="scroll-sidebar">
                 <span class="hide-menu">Profile</span>
             </a>
         </li>
+        <li class="sidebar-item">
+        <a class="sidebar-link waves-effect waves-dark sidebar-link" href="report.html"
+            aria-expanded="false">
+            <i class="fa fa-user-circle" aria-hidden="true"></i>
+            <span class="hide-menu">Newest Report</span>
+        </a>
+    </li>
   <!--      <li class="sidebar-item">
             <a class="sidebar-link waves-effect waves-dark sidebar-link" href="PatientsPath.html"
                 aria-expanded="false">
@@ -67,7 +74,7 @@ nav.innerHTML=`<div class="scroll-sidebar">
             <a class="sidebar-link waves-effect waves-dark sidebar-link" href="404.html"
                 aria-expanded="false">
                 <i class="fa fa-info-circle" aria-hidden="true"></i>
-                <span class="hide-menu">Settings</span>
+                <span class="hide-menu">FAQ</span>
             </a>
         </li>
         <li class="text-center p-20 upgrade-btn">

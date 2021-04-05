@@ -6,7 +6,7 @@ var myPythonScript = "D:\\MIU\\Graduation Project\\ProjectFIN\\BreastCancerDetec
 
 /* path of the python executable, if python is available as environment variable then you can use only "python"*/
 
-var pythonExecutable = "python";
+var pythonExecutable = "C:\\Users\\DELL\\AppData\\Local\\Programs\\Python\\Python38\\python.exe";
 
 const { spawn } = require('child_process')
 

@@ -18,7 +18,6 @@ from keras.preprocessing.image import ImageDataGenerator,array_to_img, img_to_ar
 import keras
 from keras import backend as K
 import scipy
-
 import numpy as np
 import cython
 os.environ["CUDA_DEVICE_ORDER"] = "PCI_BUS_ID"
@@ -124,11 +123,6 @@ for i in range(len(model)):
     models.append(model[i])
 
 
-
-
-
-
-
 from sklearn.metrics import classification_report, confusion_matrix
 img2 = cv2.resize(img_seg,(224,224))
 
@@ -150,7 +144,7 @@ labels = np.squeeze(labels)
 
 
 send_message_back = {
-  'arguments': str(labels),
+  'Class': str(labels),
 
 }
 
